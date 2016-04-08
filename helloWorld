@@ -1,9 +1,9 @@
 import java.io.*;
 
-public class helloWorld 
-{
-public static void main(string arg[])
-{
-  System.out.println("Welcome to github..");
-}
-}
+	public class helloWorld 
+	{
+		public static void main(String args[])
+		{
+  		System.out.println("Welcome to github..");
+		}
+	}
