@@ -1,55 +1,48 @@
-import java.io.*;
 import java.util.*;
+public class chocolateProblem 
+{
 
-	public class chocolateProblem 
-	{
-		
-      	public static void main(String args[])
-		{
-  		
-			System.out.println("Each Chocolate cost $1...");
-		        System.out.println("How much money do you have?");
-                          
-		        Scanner in = new Scanner(System.in);
-          	        int money = 0;
-          	        int totalNumberOfChocolates = 0;
-	 	        int totalNumberOfWrapper = 0;
-	 	        int chocolatesForWrappers = 0;
-	 	        int remainingChocolates = 0;
-	 	        
-          	        money = in.nextInt();
-          
-		        System.out.println("You have " + money + "$");
-		        
-		        if (money >= 1)
-		        {
-		        	totalNumberOfChocolates = (money * 1);
-		        	totalNumberOfWrapper = totalNumberOfChocolates;
-		        	System.out.println("Chocolates without deal " + totalNumberOfChocolates);
-		        	if (totalNumberOfWrapper >= 3)
-		        	{
-		        		System.out.println("Chocolates wrappers " + chocolatesForWrappers);
-		        		do
-		        		{
-		        		
-		        			chocolatesForWrappers = (totalNumberOfWrapper / 3);
-					//	remainingChocolates   = (totalNumberOfWrapper % 3);
+public static void main(String args[])
+{
 
-					//	totalNumberOfChocolates = totalNumberOfChocolates + chocolatesForWrappers;
-					//	totalNumberOfWrapper = chocolatesForWrappers + remainingChocolates;
-					//	chocolatesForWrappers = remainingChocolates;
-					//	System.out.println("Chocolates wrappers " + totalNumberOfWrapper);
-						System.out.println("Chocolates wrappers " + chocolatesForWrappers );
-		        				        			
-		        		}while (totalNumberOfWrapper < 3);
-		        	}
-		        	
-		        	System.out.println("Chocolates with deal " + totalNumberOfChocolates);
- 		        	 
+System.out.println("Each Chocolate cost $1...");
+System.out.println("How much money do you have?");
 
-		        }
-		        
-          
-          
-		}
-	}
+Scanner in = new Scanner(System.in);
+int money = 0;
+int totalNumberOfChocolates = 0;
+int totalNumberOfWrapper = 0;
+int chocolatesForWrappers = 0;
+int remainingChocolates = 0;
+
+money = in.nextInt();
+
+System.out.println("You have " + money + "$");
+
+if (money >= 1)
+{
+totalNumberOfChocolates = (money * 1);
+totalNumberOfWrapper = totalNumberOfChocolates;
+System.out.println("Chocolates without deal " + totalNumberOfChocolates);
+if (totalNumberOfWrapper >= 3)
+{
+
+do
+{
+
+chocolatesForWrappers = (totalNumberOfWrapper / 3);
+remainingChocolates = (totalNumberOfWrapper % 3);
+totalNumberOfChocolates = totalNumberOfChocolates + chocolatesForWrappers;
+totalNumberOfWrapper = chocolatesForWrappers + remainingChocolates;
+chocolatesForWrappers = remainingChocolates;
+
+}while (totalNumberOfWrapper >= 3);
+}
+
+System.out.println("Chocolates with deal " + totalNumberOfChocolates);
+}
+
+
+
+}
+}
